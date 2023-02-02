@@ -15,6 +15,9 @@
   "repository": {
     "url": "https://github.com/desouky95/jewells"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@babel/cli": "7.20.7",
     "@babel/core": "7.20.12",
