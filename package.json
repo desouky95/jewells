@@ -4,7 +4,6 @@
   "description": "",
   "type": "module",
   "main": "index.js",
-  "private": "true",
   "scripts": {
     "version": "lerna version",
     "build": "node ./scripts/cleanup.cjs && lerna run build",
