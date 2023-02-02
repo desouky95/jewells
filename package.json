@@ -7,7 +7,7 @@
   "scripts": {
     "version": "lerna version",
     "build": "node ./scripts/cleanup.cjs && lerna run build",
-    "publish": "lerna publish from-package --contents build --dist-tag latest"
+    "publish": "lerna publish from-package --dist-tag latest --contents build "
   },
   "keywords": [],
   "author": "",
