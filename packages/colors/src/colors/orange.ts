@@ -10,3 +10,5 @@ const orange = {
   800: "rgb(98, 45, 23)",
   900: "rgb(75, 34, 17)",
 };
+
+export default orange

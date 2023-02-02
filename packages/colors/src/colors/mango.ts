@@ -10,3 +10,4 @@ const mango = {
   800: "rgb(140, 109, 46)",
   900: "rgb(107, 83, 35)",
 };
+export default mango

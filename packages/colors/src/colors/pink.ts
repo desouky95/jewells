@@ -10,3 +10,5 @@ const pink = {
   800: "rgb(98, 23, 81)",
   900: "rgb(75, 17, 62)",
 };
+
+export default pink

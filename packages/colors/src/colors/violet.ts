@@ -10,3 +10,5 @@ const violet = {
   800: "rgb(33, 23, 98)",
   900: "rgb(25, 17, 75)",
 };
+
+export default violet

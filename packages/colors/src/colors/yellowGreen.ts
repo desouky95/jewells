@@ -9,3 +9,5 @@ const yellowGreen = {
   700: "rgb(143, 181, 23)",
   800: "rgb(111, 140, 18)",
 };
+
+export default yellowGreen

@@ -1,0 +1,12 @@
+export { default as blue } from "./colors/blue";
+export { default as cyan } from "./colors/cyan";
+export { default as deepRed } from "./colors/deepRed";
+export { default as green } from "./colors/green";
+export { default as mango } from "./colors/mango";
+export { default as orange } from "./colors/orange";
+export { default as pink } from "./colors/pink";
+export { default as purple } from "./colors/purple";
+export { default as red } from "./colors/red";
+export { default as violet } from "./colors/violet";
+export { default as yellow } from "./colors/yellow";
+export { default as yellowGreen } from "./colors/yellowGreen";

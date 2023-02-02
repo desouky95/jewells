@@ -10,3 +10,4 @@ const cyan = {
   800: "rgb(23, 94, 98)",
   900: "rgb(17, 71, 75)",
 };
+export default cyan

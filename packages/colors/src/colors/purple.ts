@@ -9,3 +9,6 @@ const purple = {
   800: "rgb(73, 22, 96)",
   900: "rgb(55, 17, 74)",
 };
+
+
+export default purple

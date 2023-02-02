@@ -10,3 +10,6 @@ const green = {
   800: "rgb(23, 98, 30)",
   900: "rgb(17, 75, 23)",
 };
+
+
+export default green

@@ -1,12 +1,15 @@
 {
   "name": "@jewells/colors",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:babel && npm run build:types",
+    "build:babel": "node ../../scripts/build.cjs",
+    "build:types": "node ../../scripts/build-types.cjs"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {}
 }

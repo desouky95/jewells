@@ -10,3 +10,5 @@ const blue = {
   800: "rgb(23, 62, 98)",
   900: "rgb(17, 47, 75)",
 };
+
+export default blue;

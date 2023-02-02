@@ -10,3 +10,5 @@ const red = {
   800: "rgb(98, 23, 23)",
   900: "rgb(75, 17, 17)",
 };
+
+export default red

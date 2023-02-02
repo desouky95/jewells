@@ -10,3 +10,5 @@ const deepRed = {
   800: "rgb(98, 23, 41)",
   900: "rgb(75, 17, 31)",
 };
+
+export default deepRed
