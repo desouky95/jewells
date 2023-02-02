@@ -4,11 +4,11 @@
   "description": "",
   "type": "module",
   "main": "index.js",
-  "private" : "true",
+  "private": "true",
   "scripts": {
-    "version": "npx lerna version",
-    "build": "npx lerna run build",
-    "publish": "npx lerna publish from-package --contents build --dist-tag latest"
+    "version": "lerna version",
+    "build": "node ./scripts/cleanup.cjs && lerna run build",
+    "publish": "lerna publish from-package --contents build --dist-tag latest"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +31,7 @@
   "dependencies": {
     "fast-glob": "3.2.12",
     "fs-extra": "11.1.0",
+    "glob": "8.1.0",
     "yargs": "17.6.2"
   },
   "workspaces": [
