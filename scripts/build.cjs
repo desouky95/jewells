@@ -1,7 +1,49 @@
 const yargs = require("yargs");
 const path = require("path");
 const glob = require("fast-glob");
-const { exec, execSync } = require("child_process");
+const child_process = require("child_process");
+const { promisify } = require("util");
+const exec = promisify(child_process.exec);
+const fse = require("fs-extra");
+
+const packagePath = process.cwd();
+const buildPath = path.join(packagePath, "./build");
+
+async function createPackageFile() {
+  const packageData = await fse.readFile(
+    path.resolve(packagePath, "./package.json"),
+    "utf8"
+  );
+  const { nyc, scripts, devDependencies, workspaces, ...packageDataOther } =
+    JSON.parse(packageData);
+
+  const newPackageData = {
+    ...packageDataOther,
+    private: false,
+    ...(packageDataOther.main
+      ? {
+          main: fse.existsSync(path.resolve(buildPath, "./node/index.js"))
+            ? "./node/index.js"
+            : "./index.js",
+          module: fse.existsSync(path.resolve(buildPath, "./esm/index.js"))
+            ? "./esm/index.js"
+            : "./index.js",
+        }
+      : {}),
+    types: "./index.d.ts",
+  };
+
+  const targetPath = path.resolve(buildPath, "./package.json");
+
+  await fse.writeFile(
+    targetPath,
+    JSON.stringify(newPackageData, null, 2),
+    "utf8"
+  );
+  console.log(`Created package.json in ${targetPath}`);
+
+  return newPackageData;
+}
 yargs("build")
   .option("out-dir", { default: "./build", type: "string" })
   .command("build", "building...", async ({ argv }) => {
@@ -46,10 +88,12 @@ yargs("build")
 
     const command = ["npx babel", ...babelArgs].join(" ");
 
-    exec(command, {
+    const { stderr, stdout } = await exec(command, {
       env: { ...process.env, ...env },
-    }).on("error", (error) => {
-      throw new Error(`'${command}' failed with \n${error}`);
     });
+    if (stderr) {
+      throw new Error(`'${command}' failed with \n${error}`);
+    }
+    await createPackageFile();
   })
   .parse();

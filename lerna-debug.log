@@ -1,0 +1,41 @@
+0 silly argv {
+0 silly argv   _: [ 'publish' ],
+0 silly argv   contents: 'build',
+0 silly argv   'dist-tag': 'latest',
+0 silly argv   distTag: 'latest',
+0 silly argv   composed: 'publish',
+0 silly argv   lernaVersion: '6.4.1',
+0 silly argv   '$0': 'node_modules\\lerna\\cli.js',
+0 silly argv   bump: 'from-package'
+0 silly argv }
+1 notice cli v6.4.1
+2 verbose rootPath H:\Work\jewells
+3 info versioning independent
+4 verbose session a7c1a5edc419e51a
+5 verbose user-agent lerna/6.4.1/node@v16.16.0+x64 (win32)
+6 warn Yarn's registry proxy is broken, replacing with public npm registry
+7 warn If you don't have an npm token, you should exit and run `npm login`
+8 verbose git-describe undefined => "@jewells/colors@0.0.5-0-gef2c510"
+9 silly git-describe parsed => {"lastTagName":"@jewells/colors@0.0.5","lastVersion":"0.0.5","refCount":"0","sha":"ef2c510","isDirty":false}
+10 silly getUnpublishedPackages
+11 warn Unable to determine published version, assuming "@jewells/colors" unpublished.
+12 info publish Publishing packages to npm...
+13 warn ENOLICENSE Package @jewells/colors is missing a license.
+13 warn ENOLICENSE One way to fix this is to add a LICENSE.md file to the root of this repository.
+13 warn ENOLICENSE See https://choosealicense.com for additional guidance.
+14 silly getCurrentSHA
+15 verbose getCurrentSHA ef2c510052403dc23f3d182f571b9e8a87db77ee
+16 warn lifecycle Skipping root "prepublish" because it has already been called
+17 silly lifecycle No script for "prepare" in "jewells", continuing
+18 silly lifecycle No script for "prepublishOnly" in "jewells", continuing
+19 silly lifecycle No script for "prepack" in "jewells", continuing
+20 verbose pack-directory packages\colors\build
+21 silly lifecycle No script for "prepublish" in "@jewells/colors", continuing
+22 silly lifecycle No script for "prepare" in "@jewells/colors", continuing
+23 silly lifecycle No script for "prepublishOnly" in "@jewells/colors", continuing
+24 silly lifecycle No script for "prepack" in "@jewells/colors", continuing
+25 silly lifecycle No script for "postpack" in "@jewells/colors", continuing
+26 verbose packed packages\colors\build
+27 silly lifecycle No script for "postpack" in "jewells", continuing
+28 verbose publish @jewells/colors
+29 error

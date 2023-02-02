@@ -1,13 +1,13 @@
 const yargs = require("yargs");
 const glob = require("glob");
 const { existsSync, rmSync } = require("fs");
-const { default: path } = require("path");
+const { resolve } = require("path");
 yargs("cleanup")
   .command("cleanup", false, async (args) => {
     const files = glob.sync("packages/**/build".replace(/\\/g, "/"), {});
     files.forEach((_) => {
-      if (existsSync(path.resolve(_))) {
-        rmSync(path.resolve(_), {
+      if (existsSync(resolve(_))) {
+        rmSync(resolve(_), {
           force: true,
           recursive: true,
           maxRetries: 2,
