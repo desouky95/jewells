@@ -9,6 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "url": "https://github.com/desouky95/jewells"
+  },
   "devDependencies": {
     "@changesets/cli": "2.26.0"
   }
