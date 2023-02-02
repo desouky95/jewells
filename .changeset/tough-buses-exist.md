@@ -1,3 +1,0 @@
----
-"@jewells/colors": patch
----

@@ -4,6 +4,7 @@
   "description": "",
   "type": "module",
   "main": "index.js",
+  "private" : "true",
   "scripts": {
     "version": "npx lerna version",
     "build": "npx lerna run build",
